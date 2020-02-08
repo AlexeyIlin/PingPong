@@ -13,9 +13,18 @@ public class PingPong {
             ping.start();
             pong.start();
 
+            Thread pingV2 = new Thread(new PingV2(pong, i));
+            Thread pongV2 = new Thread(new PongV2(pingV2, i));
+
+            pingV2.start();
+            pongV2.start();
+
             try {
                 ping.join();
                 pong.join();
+                pingV2.join();
+                pongV2.join();
+
             } catch (InterruptedException e) {
                 System.out.println("Thread broken");
             }
