@@ -31,8 +31,6 @@ public class PingPong {
         }
 
         System.out.println("PingPong ended");
-
-
-
+        
     }
 }
