@@ -19,6 +19,5 @@ public class Pong extends Thread {
         }
         System.out.println("Pong"+i);
     }
-
-
+    
 }
